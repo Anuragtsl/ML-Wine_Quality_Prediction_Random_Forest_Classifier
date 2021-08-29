@@ -1,10 +1,27 @@
 Link:- https://archive.ics.uci.edu/ml/datasets/wine+quality
 
 Download the Dataset directly in your notebook:
+  
   1)url1 = 'http://www3.dsi.uminho.pt/pcortez/wine/winequality.zip'
     url2 = 'https://drive.google.com/uc?id=1dAb2OalBSblCop9UbGjiv9qnS3N-3Kuw'
     file = 'raw_data.zip'
-  2)wine_csv.seek(0)
+    
+  2)try:
+      with requests.Session() as s:
+        response = s.get(url1)
+      open(file, 'wb').write(response.content)
+      print('Sucessful download from url 1\n')
+    except:
+      with requests.Session() as s:
+        response = s.get(url2)
+      open(file, 'wb').write(response.content)
+      print('Sucessful download from url 2\n')
+
+    zip_file = zipfile.ZipFile(file, mode='r')
+    zip_file.printdir()
+  
+  3)wine_csv.seek(0)
     wine = pd.read_csv(wine_csv, sep=';')
     wine_csv.close()
-  3)wine.head(10)
+  
+  4)wine.head(10)
