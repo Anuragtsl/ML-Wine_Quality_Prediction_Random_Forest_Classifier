@@ -19,9 +19,12 @@ Download the Dataset directly in your notebook:
 
     zip_file = zipfile.ZipFile(file, mode='r')
     zip_file.printdir()
+    
+  3)path = 'winequality/winequality-red.csv'
+    wine_csv = zip_file.open(path, mode='r')
   
-  3)wine_csv.seek(0)
+  4)wine_csv.seek(0)
     wine = pd.read_csv(wine_csv, sep=';')
     wine_csv.close()
   
-  4)wine.head(10)
+  5)wine.head(10)
