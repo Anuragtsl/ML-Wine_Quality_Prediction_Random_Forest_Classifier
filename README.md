@@ -20,6 +20,8 @@ I've used [Google Colab](https://colab.research.google.com/) for coding!
 * Clustering Analysis
 * Performing Hyperparameter Tuning
 
+***Follow along [notebook](https://github.com/Anuragtsl/ML-Wine_Quality_Prediction_Random_Forest_Classifier/blob/main/wine_project_full.ipynb) for more!***
+
 # Further Readings:
 
 * 4 Types of Classification Tasks in Machine Learning. **Available [here](https://machinelearningmastery.com/types-of-classification-in-machine-learning/).**
