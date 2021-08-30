@@ -28,3 +28,5 @@ Download the Dataset directly in your notebook:
     wine_csv.close()
   
   5)wine.head(10)
+
+#Njoy!
